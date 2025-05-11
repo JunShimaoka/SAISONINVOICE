@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>セゾンインボイス - キャッシュフロー革命</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Noto Sans JP', 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        /* パンフレットの青を基調とした色に変更 */
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://placehold.co/1200x800/2c5282/E2E8F0?text=キャッシュフローイメージ'); /* 背景画像を青系に */
+            background-size: cover;
+            background-position: center;
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #3b82f6, #60a5fa); /* 青系のグラデーション */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .cta-button {
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .feature-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        /* ハンバーガーメニュー用 */
+        .menu-open {
+            display: block !important;
+        }
+        /* カスタムカラー */
+        :root {
+            --main-blue: #2563eb; /* Tailwind blue-600 */
+            --dark-blue: #1e40af; /* Tailwind blue-800 */
+            --light-blue: #60a5fa; /* Tailwind blue-400 */
+            --accent-yellow: #f59e0b; /* Tailwind amber-500 */
+        }
+        .text-main-blue { color: var(--main-blue); }
+        .bg-main-blue { background-color: var(--main-blue); }
+        .hover\:bg-dark-blue:hover { background-color: var(--dark-blue); }
+        .border-main-blue { border-color: var(--main-blue); }
+        .focus\:ring-main-blue:focus { ring-color: var(--main-blue); }
+
+        .text-dark-blue { color: var(--dark-blue); }
+        .bg-dark-blue { background-color: var(--dark-blue); }
+
+        .text-accent-yellow { color: var(--accent-yellow); }
+        .bg-accent-yellow { background-color: var(--accent-yellow); }
+
+        .line-button {
+            background-color: #06C755; /* LINE Green */
+        }
+        .line-button:hover {
+            background-color: #05a544;
+        }
+
+        /* 導入プロセスのステップスタイル */
+        .process-step {
+            border-left: 4px solid var(--main-blue);
+        }
+        .process-step-number {
+            background-color: var(--main-blue);
+            color: white;
+            border-radius: 50%;
+            width: 2.5rem;
+            height: 2.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.25rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-main-blue">SAISON INVOICE</a>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#features" class="text-gray-600 hover:text-main-blue">特徴</a>
+                <a href="#services" class="text-gray-600 hover:text-main-blue">サービス</a>
+                <a href="#benefits" class="text-gray-600 hover:text-main-blue">メリット</a>
+                <a href="#cases" class="text-gray-600 hover:text-main-blue">導入事例</a>
+                <a href="#contact" class="text-gray-600 hover:text-main-blue">お問い合わせ</a>
+            </nav>
+            <div class="md:hidden">
+                <button id="menu-button" class="text-gray-600 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden hidden bg-white shadow-lg py-2">
+            <a href="#features" class="block px-6 py-2 text-gray-600 hover:bg-blue-50 hover:text-main-blue">特徴</a>
+            <a href="#services" class="block px-6 py-2 text-gray-600 hover:bg-blue-50 hover:text-main-blue">サービス</a>
+            <a href="#benefits" class="block px-6 py-2 text-gray-600 hover:bg-blue-50 hover:text-main-blue">メリット</a>
+            <a href="#cases" class="block px-6 py-2 text-gray-600 hover:bg-blue-50 hover:text-main-blue">導入事例</a>
+            <a href="#contact" class="block px-6 py-2 text-gray-600 hover:bg-blue-50 hover:text-main-blue">お問い合わせ</a>
+        </div>
+    </header>
+
+    <section class="hero-bg text-white py-20 md:py-32">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                <span class="gradient-text bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 filter brightness-125 contrast-110">SAISON INVOICE</span> で、<br class="md:hidden">キャッシュフロー革命を。
+            </h1>
+            <p class="text-lg md:text-2xl mb-10 max-w-3xl mx-auto">
+                あらゆる業種のキャッシュフロー改善に最適なソリューション。<br>
+                支払いの延伸・入金の早期化で、貴社のビジネスを加速させます。
+            </p>
+            <a href="#contact" class="bg-main-blue hover:bg-dark-blue text-white font-bold py-4 px-10 rounded-lg text-lg cta-button inline-block">
+                まずは無料相談
+            </a>
+        </div>
+    </section>
+
+    <section id="features" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">こんな経営課題、抱えていませんか？</h2>
+                <p class="text-gray-600 text-lg">SAISON INVOICEが包括的に解決します。</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-100 p-6 rounded-lg shadow-lg feature-card">
+                    <h3 class="text-xl font-semibold text-main-blue mb-3">資金繰りの課題</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li>支払と入金のサイトギャップ</li>
+                        <li>売掛金の回収を早期化したい</li>
+                        <li>仕入先への支払いを延長したい</li>
+                        <li>運転資金を確保したい</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg shadow-lg feature-card">
+                    <h3 class="text-xl font-semibold text-main-blue mb-3">業務効率化の課題</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li>請求書発行・送付の手間</li>
+                        <li>督促・回収業務の負担</li>
+                        <li>入金確認や消込作業の工数</li>
+                        <li>営業担当の回収業務負担</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg shadow-lg feature-card">
+                    <h3 class="text-xl font-semibold text-main-blue mb-3">回収リスクの課題</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li>過去に貸倒があり不安</li>
+                        <li>未回収リスクを解消したい</li>
+                        <li>販売先の支払遅延が心配</li>
+                        <li>取引先の倒産リスク対策</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg shadow-lg feature-card">
+                    <h3 class="text-xl font-semibold text-main-blue mb-3">与信管理の課題</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li>新規企業との取引審査が困難</li>
+                        <li>与信審査のノウハウが不足</li>
+                        <li>与信枠の制約で取引制限</li>
+                        <li>リスク評価が難しい</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg shadow-lg feature-card">
+                    <h3 class="text-xl font-semibold text-main-blue mb-3">支払い手段の課題</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li>手形支払いからの脱却</li>
+                        <li>仕入先へ早期支払し価格交渉</li>
+                        <li>多様な支払手段のニーズ</li>
+                        <li>現金決済への移行圧力</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg shadow-lg feature-card">
+                    <h3 class="text-xl font-semibold text-main-blue mb-3">ビジネスモデルの課題</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li>掛け払いオプションの提供</li>
+                        <li>新規顧客層の開拓</li>
+                        <li>柔軟な決済手段の提供</li>
+                        <li>BtoBモデルのDX化</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="text-center mt-12 text-xl text-gray-700 font-semibold">
+                バランスシートへの影響なくキャッシュフローを最適化します。
+            </p>
+        </div>
+    </section>
+
+    <section id="services" class="py-16 md:py-24 bg-blue-50"> {/* 背景色を薄い青に */}
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">SAISON INVOICEの提供価値</h2>
+                <p class="text-gray-600 text-lg">「支払い延伸」と「入金早期化」の2つの側面からサポート。</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8 items-start">
+                <div class="bg-white p-8 rounded-xl shadow-xl feature-card">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-12 h-12 text-main-blue mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <h3 class="text-2xl font-bold text-dark-blue">支払い延伸</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4">仕入先様への支払いは取引登録後の最短翌営業日。貴社の支払いは最大120日後に延伸可能です。</p>
+                    <ul class="list-disc list-inside text-gray-600 space-y-2">
+                        <li>支払いの延伸 (請求60～120日後)</li>
+                        <li>手元資金の増加</li>
+                        <li>クレジットカード払いが利用不可の仕入れ先でも延伸可能</li>
+                        <li>仕入先への早期支払い</li>
+                        <li>手形の代替手段としての活用</li>
+                    </ul>
+                    <p class="mt-4 text-sm text-gray-500">※仕入先様への支払いは取引登録後の最短で翌営業日に行い、貴社からクレディセゾンへのお支払いは60～120日後に設定できます。</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-xl feature-card">
+                     <div class="flex items-center mb-4">
+                        <svg class="w-12 h-12 text-green-500 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                        <h3 class="text-2xl font-bold text-green-600">入金早期化</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4">販売先様からの代金入金予定分を、取引登録後の最短翌営業日に受け取り可能です。</p>
+                    <ul class="list-disc list-inside text-gray-600 space-y-2">
+                        <li>取引先からの入金早期化</li>
+                        <li>未回収リスクの解消</li>
+                        <li>請求・回収業務の効率化</li>
+                        <li>取引先の与信審査</li>
+                        <li>長期サイト提供による取引機会拡大</li>
+                    </ul>
+                     <p class="mt-4 text-sm text-gray-500">※販売先様からクレディセゾンへのお支払いは最大120日後、貴社へは取引登録後最短翌営業日にお支払いします。</p>
+                </div>
+            </div>
+             <div class="text-center mt-12">
+                <p class="text-lg text-gray-700 font-semibold">クレジットカード払いができない取引先でも利用可能！</p>
+                <p class="text-lg text-gray-700 font-semibold">未回収リスクの解消と請求・回収業務の効率化を実現します！</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="benefits" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">全業種共通！4つの大きなメリット</h2>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-gray-100 p-6 rounded-lg shadow-lg text-center feature-card">
+                    <div class="p-4 bg-main-blue text-white rounded-full inline-block mb-4">
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-dark-blue mb-2">業界最大級の支払サイト</h3>
+                    <p class="text-gray-600">最大180日の支払い猶予。大型投資・仕入れの資金繰り改善、季節変動への対応、支払いスケジュールの最適化を実現します。</p>
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg shadow-lg text-center feature-card">
+                    <div class="p-4 bg-green-500 text-white rounded-full inline-block mb-4">
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-green-600 mb-2">入金・支払いのギャップ解消</h3>
+                    <p class="text-gray-600">売掛金の早期現金化。仕入先への支払いと入金時期の調整により、経営の安定化、事業拡大のための資金確保をサポートします。</p>
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg shadow-lg text-center feature-card">
+                    <div class="p-4 bg-blue-500 text-white rounded-full inline-block mb-4"> {/* 既存の青を維持 */}
+                         <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-blue-600 mb-2">大手企業の信頼性</h3>
+                    <p class="text-gray-600">クレディセゾンの高い信用力。業務負担の軽減、専任サポート担当者による対応で安心してご利用いただけます。</p>
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg shadow-lg text-center feature-card">
+                    <div class="p-4 bg-purple-500 text-white rounded-full inline-block mb-4"> {/* 既存の紫を維持 */}
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-purple-600 mb-2">取引先との関係強化</h3>
+                    <p class="text-gray-600">仕入先への早期支払いによる優遇、販売先への柔軟な支払い条件提供。取引条件の交渉力強化、ビジネスチャンス拡大に繋がります。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cases" class="py-16 md:py-24 bg-blue-50"> {/* 背景色を薄い青に */}
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">SAISON INVOICE 導入事例</h2>
+                <p class="text-gray-600 text-lg">様々な業種でキャッシュフロー改善を実現しています。</p>
+            </div>
+            <div class="space-y-8">
+                <div class="bg-white p-8 rounded-xl shadow-xl feature-card">
+                    <h3 class="text-2xl font-semibold text-dark-blue mb-3">事例：中堅製造業者様 - 製造業における資金効率改善</h3>
+                    <p class="text-gray-700 mb-2"><strong class="font-semibold">課題：</strong>仕入先への支払いが60-90日、取引先からの入金が90-120日と支払いサイトにギャップがあり、運転資金の確保に課題。</p>
+                    <p class="text-gray-700"><strong class="font-semibold">効果：</strong>両面活用により、約4.5億円の運転資金を確保。早期支払いによる年間仕入れコスト2880万円(1.6%)削減。手数料(2.2%)を差し引いても、実質0.6%の負担で改善。</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-xl feature-card">
+                    <h3 class="text-2xl font-semibold text-dark-blue mb-3">事例：200床規模の民間病院様 - 医療材料費等の支払いサイト延長</h3>
+                    <p class="text-gray-700 mb-2"><strong class="font-semibold">課題：</strong>医薬品、医療材料等の月間支払額が約5,000万円と大きく、資金繰りの負担が重い。90日サイトでの支払いが一般的で、運転資金の確保が課題。</p>
+                    <p class="text-gray-700"><strong class="font-semibold">効果：</strong>支払いを90日から180日に延長することで、約1.5億円の運転資金を確保。早期支払いによる仕入先との交渉により、年間約1,500万円(2.5%)のコスト削減を実現。年間約180万円の実質削減効果。</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-xl feature-card">
+                    <h3 class="text-2xl font-semibold text-dark-blue mb-3">事例：IT・サービス業者様 - 請求・回収業務の効率化と未回収リスク対策</h3>
+                    <p class="text-gray-700 mb-2"><strong class="font-semibold">課題：</strong>請求書発行から入金確認、督促業務まで多くの工数がかかり、営業担当者の負担。過去の貸し倒れ経験から、与信管理と未回収リスク対策が課題。</p>
+                    <p class="text-gray-700"><strong class="font-semibold">効果：</strong>請求業務の工数が月間40時間から5時間に削減。入金が最短翌日に確定し、月間約5,700万円の資金確保。未回収リスクがゼロとなり、新規顧客の獲得が加速。</p>
+                </div>
+                 <div class="bg-white p-8 rounded-xl shadow-xl feature-card">
+                    <h3 class="text-2xl font-semibold text-dark-blue mb-3">事例：食品卸売業者様 - 仕入れと販売の支払いサイトギャップ解消</h3>
+                    <p class="text-gray-700 mb-2"><strong class="font-semibold">課題：</strong>仕入先への支払いサイトは30日、販売先からの入金サイトは60-90日と大きなギャップがあり、資金繰りに苦慮。季節変動による在庫増加時期は特に資金負担が大。</p>
+                    <p class="text-gray-700"><strong class="font-semibold">効果：</strong>支払いサイトと入金サイトのギャップ解消。運転資金の確保により約2.1億円の資金繰り改善。年間約3,600万円の金融コスト削減。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="process-pricing" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">導入プロセスと料金体系</h2>
+            </div>
+            <div class="grid lg:grid-cols-2 gap-12 items-start">
+                <div>
+                    <h3 class="text-2xl font-semibold text-dark-blue mb-8 text-center lg:text-left">スムーズな導入プロセス</h3>
+                    <div class="space-y-8">
+                        <div>
+                            <h4 class="text-xl font-semibold text-main-blue mb-4">【A】支払代行・延伸 / 【B】入金早期化 共通プロセス</h4>
+                            <div class="space-y-6">
+                                <div class="flex items-start process-step pl-6 py-4 bg-gray-50 rounded-lg">
+                                    <div class="process-step-number mr-4 flex-shrink-0">1</div>
+                                    <div>
+                                        <h5 class="font-semibold text-lg text-gray-800 mb-1">申込み・審査</h5>
+                                        <ul class="list-disc list-inside text-gray-600 text-sm space-y-1">
+                                            <li>ヒアリングシート記入、必要書類提出、審査実施</li>
+                                            <li>【A】バイヤー与信枠の設定 / 【B】サプライヤー与信枠の設定</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="flex items-start process-step pl-6 py-4 bg-gray-50 rounded-lg">
+                                    <div class="process-step-number mr-4 flex-shrink-0">2</div>
+                                    <div>
+                                        <h5 class="font-semibold text-lg text-gray-800 mb-1">事前対応 / 契約確認</h5>
+                                        <ul class="list-disc list-inside text-gray-600 text-sm space-y-1">
+                                            <li>【A】契約書確認、仕入先様説明、契約締結</li>
+                                            <li>【B】利用規約確認、申込書提出、支払条件確定</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="flex items-start process-step pl-6 py-4 bg-gray-50 rounded-lg">
+                                    <div class="process-step-number mr-4 flex-shrink-0">3</div>
+                                    <div>
+                                        <h5 class="font-semibold text-lg text-gray-800 mb-1">システム設定</h5>
+                                        <ul class="list-disc list-inside text-gray-600 text-sm space-y-1">
+                                            <li>システム情報登録、連携設定、運用ルール設定</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="flex items-start process-step pl-6 py-4 bg-gray-50 rounded-lg">
+                                    <div class="process-step-number mr-4 flex-shrink-0">4</div>
+                                    <div>
+                                        <h5 class="font-semibold text-lg text-gray-800 mb-1">運用開始</h5>
+                                        <ul class="list-disc list-inside text-gray-600 text-sm space-y-1">
+                                            <li>説明会実施、担当者配置</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-semibold text-dark-blue mb-8 text-center lg:text-left">シンプルな料金体系</h3>
+                    <div class="bg-main-blue text-white p-8 rounded-xl shadow-xl feature-card">
+                        <div class="mb-4">
+                            <p class="text-lg">初期費用: <span class="font-bold text-2xl">10,000円</span> (税別)</p>
+                            <p class="text-sm">(契約時の登録料 ※契約更新(5年毎)時も同額)</p>
+                        </div>
+                        <div class="mb-4">
+                            <p class="text-lg">月額費用: <span class="font-bold text-2xl">0円</span></p>
+                            <p class="text-sm">(基本料金・システム利用料 ※完全従量制)</p>
+                        </div>
+                        <div class="mb-4">
+                            <p class="text-lg">支払いサイト: <span class="font-bold">60日・90日・120日</span></p>
+                        </div>
+                        <div>
+                            <p class="text-lg">取引手数料: <span class="font-bold">1.5%～5.5%</span></p>
+                        </div>
+                    </div>
+                    <div class="mt-6 p-6 bg-green-100 border-l-4 border-green-500 text-green-700 rounded-md">
+                        <p class="font-bold">ポイント！</p>
+                        <p>SAISON INVOICEは有利子負債にならないため、貸借対照表(BS)への悪影響なく資金繰りを改善できます。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-16 md:py-24 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">お気軽にお問い合わせください</h2>
+                <p class="text-gray-600 text-lg">サービスの詳細、導入のご相談など、何でもお気軽にご連絡ください。<br class="hidden md:inline">担当者より折り返しご連絡いたします。</p>
+            </div>
+
+            <div class="max-w-2xl mx-auto bg-white p-8 md:p-12 rounded-xl shadow-2xl">
+                <h3 class="text-xl font-semibold text-dark-blue mb-6 text-center">お問い合わせフォーム</h3>
+                <form id="contactForm">
+                    <div class="grid md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label for="companyName" class="block text-sm font-medium text-gray-700 mb-1">貴社名 <span class="text-red-500">*</span></label>
+                            <input type="text" id="companyName" name="companyName" required class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-main-blue focus:border-main-blue">
+                        </div>
+                        <div>
+                            <label for="contactName" class="block text-sm font-medium text-gray-700 mb-1">ご担当者様名 <span class="text-red-500">*</span></label>
+                            <input type="text" id="contactName" name="contactName" required class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-main-blue focus:border-main-blue">
+                        </div>
+                    </div>
+                    <div class="mb-6">
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">メールアドレス <span class="text-red-500">*</span></label>
+                        <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-main-blue focus:border-main-blue">
+                    </div>
+                    <div class="mb-6">
+                        <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">電話番号 <span class="text-red-500">*</span></label>
+                        <input type="tel" id="phone" name="phone" required class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-main-blue focus:border-main-blue">
+                    </div>
+                    <div class="mb-6">
+                        <label for="inquiryType" class="block text-sm font-medium text-gray-700 mb-1">お問い合わせ種別</label>
+                        <select id="inquiryType" name="inquiryType" class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-main-blue focus:border-main-blue">
+                            <option value="details">サービス詳細について</option>
+                            <option value="consultation">導入相談</option>
+                            <option value="pricing">料金について</option>
+                            <option value="other">その他</option>
+                        </select>
+                    </div>
+                    <div class="mb-6">
+                        <label for="message" class="block text-sm font-medium text-gray-700 mb-1">お問い合わせ内容 <span class="text-red-500">*</span></label>
+                        <textarea id="message" name="message" rows="5" required class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-main-blue focus:border-main-blue"></textarea>
+                    </div>
+                    <div class="mb-6">
+                        <label class="flex items-center">
+                            <input type="checkbox" id="privacyPolicy" name="privacyPolicy" required class="h-4 w-4 text-main-blue border-gray-300 rounded focus:ring-main-blue">
+                            <span class="ml-2 text-sm text-gray-700"><a href="#" class="text-main-blue hover:underline">プライバシーポリシー</a>に同意します。 <span class="text-red-500">*</span></span>
+                        </label>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="bg-main-blue hover:bg-dark-blue text-white font-bold py-3 px-8 rounded-lg text-lg cta-button w-full md:w-auto">
+                            送信する
+                        </button>
+                    </div>
+                </form>
+                <div id="formMessage" class="mt-6 text-center"></div>
+
+                <div class="mt-12 pt-8 border-t border-gray-300 text-center">
+                    <h3 class="text-xl font-semibold text-dark-blue mb-4">LINEでもお気軽にご相談ください</h3>
+                    <a href="https://line.me/R/ti/p/@YOUR_LINE_ID" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-lg shadow-sm text-base font-medium text-white line-button hover:bg-green-700 cta-button">
+                        <i class="fab fa-line text-2xl mr-3"></i>
+                        LINEで相談する
+                    </a>
+                    <div class="mt-4">
+                        <img src="https://placehold.co/150x150/ffffff/000000?text=LINE+QRコード" alt="LINE QRコード" class="mx-auto rounded-md" onerror="this.onerror=null; this.src='https://placehold.co/150x150/E2E8F0/A0AEC0?text=QR+Error';">
+                        <p class="text-sm text-gray-600 mt-2">こちらのQRコードからも<br class="sm:hidden">友だち追加できます</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark-blue text-gray-300 py-12"> {/* フッター背景を濃い青に */}
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-semibold text-white mb-3">SAISON INVOICE</h3>
+                    <p class="text-sm">株式会社クレディセゾンが提供するキャッシュフロー改善ソリューションです。</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-2">【サービス提供元】</h4>
+                    <p class="text-sm">株式会社クレディセゾン</p>
+                    <p class="text-sm">CREDIT SAISON CO., LTD.</p>
+                    <p class="text-sm">〒170-6073 東京都豊島区東池袋3-1-1 サンシャイン60・52F</p>
+                    <p class="text-sm">貸金業者登録番号 関東財務局長 (14) 第00085号</p>
+                    <p class="text-sm">日本貸金業協会会員 第002346号</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-2">【取次代理店】</h4>
+                    <p class="text-sm">ジャパンヘルスケアサービス株式会社</p>
+                    <p class="text-sm">JAPAN HEALTHCARE SALES CO., LTD.</p>
+                    <p class="text-sm">〒103-0014 東京都中央区日本橋蛎殻町1-36-2 共和ビル4階</p>
+                    <p class="text-sm">TEL: 03-5847-1888</p>
+                </div>
+            </div>
+            <div class="border-t border-blue-700 pt-8 text-center"> {/* 区切り線の色調整 */}
+                <p class="text-sm">&copy; <span id="currentYear"></span> SAISON INVOICE. All Rights Reserved.</p>
+                <p class="text-xs mt-1">※本紙記載の情報は2025年3月1日現在のものです。変更になる場合もございますので、あらかじめご了承ください。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // ハンバーガーメニューのトグル
+        const menuButton = document.getElementById('menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('menu-open');
+        });
+
+        // スムーズスクロールとモバイルメニューを閉じる
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+                if (mobileMenu.classList.contains('menu-open')) {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenu.classList.remove('menu-open');
+                }
+            });
+        });
+
+        // お問い合わせフォームの処理
+        const contactForm = document.getElementById('contactForm');
+        const formMessage = document.getElementById('formMessage');
+
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(event) {
+                event.preventDefault(); // デフォルトの送信をキャンセル
+
+                // 簡単なバリデーション
+                const companyName = document.getElementById('companyName').value.trim();
+                const contactName = document.getElementById('contactName').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const phone = document.getElementById('phone').value.trim();
+                const message = document.getElementById('message').value.trim();
+                const privacyPolicy = document.getElementById('privacyPolicy').checked;
+
+                if (!companyName || !contactName || !email || !phone || !message) {
+                    formMessage.innerHTML = '<p class="text-red-500">必須項目をすべて入力してください。</p>';
+                    return;
+                }
+                if (!privacyPolicy) {
+                    formMessage.innerHTML = '<p class="text-red-500">プライバシーポリシーに同意してください。</p>';
+                    return;
+                }
+
+                // ここで実際のフォーム送信処理（例: Fetch APIを使った非同期送信など）を実装します。
+                // 今回は成功メッセージを表示するだけにします。
+                formMessage.innerHTML = '<p class="text-green-500">お問い合わせありがとうございます。担当者より折り返しご連絡いたします。</p>';
+                contactForm.reset(); // フォームをリセット
+            });
+        }
+
+
+        // フッターの年を更新
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // id="problems" が存在しないため、id="features" へのリンクを調整
+        // これはナビゲーションのhref属性で対応済みなので、特別なJSは不要。
+    </script>
+</body>
+</html>
