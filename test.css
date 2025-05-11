@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="800" height="1100" xmlns="http://www.w3.org/2000/svg">
+    <!-- 背景 -->
+    <rect width="800" height="1100" fill="#ffffff"/>
+    
+    <!-- タイトル背景 -->
+    <rect x="0" y="0" width="800" height="180" fill="#1e4799"/>
+    
+    <!-- タイトルテキスト -->
+    <text x="400" y="50" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="28" font-weight="bold">サンコーマーケティングフーズの成長を加速する営業ソリューション</text>
+    <text x="400" y="100" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="24">「産地活性化プラットフォーマー」の資金力を強化</text>
+    <text x="400" y="140" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="28" font-weight="bold">セゾンインボイス</text>
+    
+    <!-- セクション1: 両面活用 -->
+    <rect x="20" y="200" width="760" height="50" fill="#3b82f6" rx="8"/>
+    <text x="400" y="232" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="20" font-weight="bold">両面活用による循環型エコシステムの実現</text>
+    
+    <!-- 中央図 -->
+    <g transform="translate(400,350)">
+        <!-- サンコー本体 -->
+        <rect x="-160" y="-50" width="320" height="100" fill="#1e4799" rx="12" stroke="#ffffff" stroke-width="2"/>
+        <text x="0" y="-20" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="16" font-weight="bold">サンコーマーケティングフーズ</text>
+        <text x="0" y="0" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="14">(産地活性化プラットフォーマー)</text>
+        <text x="0" y="25" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="14" font-weight="bold">とる・うる・つくる・全部SANKO</text>
+        
+        <!-- クレディセゾン -->
+        <rect x="-100" y="-160" width="200" height="60" fill="#0b1229" rx="10"/>
+        <text x="0" y="-140" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="16" font-weight="bold">クレディセゾン</text>
+        <text x="0" y="-120" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="14">立替払い・支払代行</text>
+        
+        <!-- 漁業者 -->
+        <circle cx="-220" cy="0" r="60" fill="#26c968"/>
+        <text x="-220" y="-15" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="14" font-weight="bold">SANKO</text>
+        <text x="-220" y="0" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="14" font-weight="bold">MEMBERSHIP</text>
+        <text x="-220" y="20" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="13">(漁業者)</text>
+        
+        <!-- 飲食・小売 -->
+        <circle cx="220" cy="0" r="60" fill="#f59e0b"/>
+        <text x="220" y="-15" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="14" font-weight="bold">飲食・小売</text>
+        <text x="220" y="0" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="14" font-weight="bold">事業</text>
+        <text x="220" y="20" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="13">アカマル屋 他</text>
+        
+        <!-- 豊洲市場 -->
+        <rect x="-70" y="70" width="140" height="60" fill="#c2410c" rx="10"/>
+        <text x="0" y="90" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="16" font-weight="bold">水産卸業</text>
+        <text x="0" y="110" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="13">(豊洲市場)</text>
+        
+        <!-- 接続線 -->
+        <path d="M-160 0 L-160 0" stroke="#999999" stroke-width="2"/>
+        <path d="M160 0 L160 0" stroke="#999999" stroke-width="2"/>
+        <path d="M0 50 L0 70" stroke="#999999" stroke-width="2"/>
+        <path d="M0 -100 L0 -50" stroke="#999999" stroke-width="2"/>
+        
+        <!-- 条件表示 -->
+        <rect x="-180" y="-90" width="160" height="40" fill="#374151" rx="6"/>
+        <text x="-100" y="-75" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="12">立替払い</text>
+        <text x="-100" y="-60" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="12" font-weight="bold">最短翌営業日</text>
+        
+        <rect x="20" y="-90" width="160" height="40" fill="#374151" rx="6"/>
+        <text x="100" y="-75" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="12">延伸支払</text>
+        <text x="100" y="-60" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="12" font-weight="bold">最長120日</text>
+    </g>
+    
+    <!-- 水産事業の課題 -->
+    <rect x="20" y="480" width="370" height="260" fill="#ecfdf5" rx="12"/>
+    <rect x="20" y="480" width="370" height="45" fill="#10b981" rx="12"/>
+    <text x="205" y="507" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="16" font-weight="bold">水産事業における4つの経営課題</text>
+    
+    <!-- 課題1 -->
+    <rect x="30" y="540" width="350" height="35" fill="#ffffff" rx="6"/>
+    <circle cx="45" cy="557" r="8" fill="#10b981"/>
+    <text x="55" y="561" fill="#333333" font-family="Arial, sans-serif" font-size="14" font-weight="bold">資金繰りの課題</text>
+    <text x="70" y="578" fill="#374151" font-family="Arial, sans-serif" font-size="12">SANKO MEMBERSHIPの全量買取保証資金</text>
+    
+    <!-- 課題2 -->
+    <rect x="30" y="585" width="350" height="35" fill="#ffffff" rx="6"/>
+    <circle cx="45" cy="602" r="8" fill="#10b981"/>
+    <text x="55" y="606" fill="#333333" font-family="Arial, sans-serif" font-size="14" font-weight="bold">業務効率化</text>
+    <text x="70" y="623" fill="#374151" font-family="Arial, sans-serif" font-size="12">多数の取引先支払管理の煩雑さ</text>
+    
+    <!-- 課題3 -->
+    <rect x="30" y="630" width="350" height="35" fill="#ffffff" rx="6"/>
+    <circle cx="45" cy="647" r="8" fill="#10b981"/>
+    <text x="55" y="651" fill="#333333" font-family="Arial, sans-serif" font-size="14" font-weight="bold">出店リスク</text>
+    <text x="70" y="668" fill="#374151" font-family="Arial, sans-serif" font-size="12">急速な出店資金と新規投資の確保</text>
+    
+    <!-- 課題4 -->
+    <rect x="30" y="675" width="350" height="35" fill="#ffffff" rx="6"/>
+    <circle cx="45" cy="692" r="8" fill="#10b981"/>
+    <text x="55" y="696" fill="#333333" font-family="Arial, sans-serif" font-size="14" font-weight="bold">海外展開リスク</text>
+    <text x="70" y="713" fill="#374151" font-family="Arial, sans-serif" font-size="12">ライセンス・輸出事業の決済リスク</text>
+    
+    <!-- メリット -->
+    <rect x="410" y="480" width="370" height="260" fill="#fef3c7" rx="12"/>
+    <rect x="410" y="480" width="370" height="45" fill="#f59e0b" rx="12"/>
+    <text x="595" y="507" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="16" font-weight="bold">貴社側のメリット（事業成長の加速）</text>
+    
+    <!-- メリット1 -->
+    <rect x="420" y="540" width="350" height="30" fill="#ffffff" rx="6"/>
+    <circle cx="435" cy="555" r="6" fill="#f59e0b"/>
+    <text x="445" y="559" fill="#333333" font-family="Arial, sans-serif" font-size="13" font-weight="bold">漁業者支援の強化</text>
+    
+    <!-- メリット2 -->
+    <rect x="420" y="580" width="350" height="30" fill="#ffffff" rx="6"/>
+    <circle cx="435" cy="595" r="6" fill="#f59e0b"/>
+    <text x="445" y="599" fill="#333333" font-family="Arial, sans-serif" font-size="13" font-weight="bold">競争優位性の確立</text>
+    
+    <!-- メリット3 -->
+    <rect x="420" y="620" width="350" height="30" fill="#ffffff" rx="6"/>
+    <circle cx="435" cy="635" r="6" fill="#f59e0b"/>
+    <text x="445" y="639" fill="#333333" font-family="Arial, sans-serif" font-size="13" font-weight="bold">事業拡大機会（3年で66店舗体制）</text>
+    
+    <!-- メリット4 -->
+    <rect x="420" y="660" width="350" height="30" fill="#ffffff" rx="6"/>
+    <circle cx="435" cy="675" r="6" fill="#f59e0b"/>
+    <text x="445" y="679" fill="#333333" font-family="Arial, sans-serif" font-size="13" font-weight="bold">コスト削減（年間3,600万円削減可能）</text>
+    
+    <!-- メリット5 -->
+    <rect x="420" y="700" width="350" height="30" fill="#ffffff" rx="6"/>
+    <circle cx="435" cy="715" r="6" fill="#f59e0b"/>
+    <text x="445" y="719" fill="#333333" font-family="Arial, sans-serif" font-size="13" font-weight="bold">早期入金（翌営業日に入金）</text>
+    
+    <!-- ビジネスフロー改善 -->
+    <rect x="20" y="760" width="760" height="260" fill="#f1f5f9" rx="12"/>
+    <rect x="20" y="760" width="760" height="45" fill="#1e4799" rx="12"/>
+    <text x="400" y="787" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="16" font-weight="bold">ビジネスフロー改善モデル</text>
+    
+    <!-- 3つのビジネスモデル -->
+    <g transform="translate(130,890)">
+        <!-- 漁業部門 -->
+        <rect x="-100" y="-50" width="200" height="100" fill="#bef264" rx="10"/>
+        <rect x="-90" y="-40" width="180" height="80" fill="#ffffff" rx="8"/>
+        <text x="0" y="-20" text-anchor="middle" fill="#166534" font-family="Arial, sans-serif" font-size="12" font-weight="bold">漁業部門</text>
+        <text x="0" y="0" text-anchor="middle" fill="#166534" font-family="Arial, sans-serif" font-size="12">(SANKO MEMBERSHIP)</text>
+        <text x="0" y="20" text-anchor="middle" fill="#333333" font-family="Arial, sans-serif" font-size="11">漁業者へ：最短翌日</text>
+        <text x="0" y="35" text-anchor="middle" fill="#333333" font-family="Arial, sans-serif" font-size="11">セゾンへ：最大120日後</text>
+    </g>
+    
+    <g transform="translate(400,890)">
+        <!-- 飲食事業 -->
+        <rect x="-100" y="-50" width="200" height="100" fill="#fed7aa" rx="10"/>
+        <rect x="-90" y="-40" width="180" height="80" fill="#ffffff" rx="8"/>
+        <text x="0" y="-20" text-anchor="middle" fill="#c2410c" font-family="Arial, sans-serif" font-size="12" font-weight="bold">飲食事業</text>
+        <text x="0" y="5" text-anchor="middle" fill="#333333" font-family="Arial, sans-serif" font-size="11">食材仕入：最大120日後</text>
+        <text x="0" y="25" text-anchor="middle" fill="#333333" font-family="Arial, sans-serif" font-size="11">売上回収：最短翌日</text>
+    </g>
+    
+    <g transform="translate(670,890)">
+        <!-- 水産卸 -->
+        <rect x="-100" y="-50" width="200" height="100" fill="#bfdbfe" rx="10"/>
+        <rect x="-90" y="-40" width="180" height="80" fill="#ffffff" rx="8"/>
+        <text x="0" y="-20" text-anchor="middle" fill="#1e40af" font-family="Arial, sans-serif" font-size="12" font-weight="bold">水産卸業</text>
+        <text x="0" y="0" text-anchor="middle" fill="#1e40af" font-family="Arial, sans-serif" font-size="12">(豊洲市場)</text>
+        <text x="0" y="20" text-anchor="middle" fill="#333333" font-family="Arial, sans-serif" font-size="11">豊洲市場：最大120日後</text>
+        <text x="0" y="35" text-anchor="middle" fill="#333333" font-family="Arial, sans-serif" font-size="11">貴社へ：最短翌日</text>
+    </g>
+    
+    <!-- 底部のまとめ -->
+    <rect x="20" y="1040" width="760" height="50" fill="#1e4799" rx="8"/>
+    <text x="400" y="1068" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="16" font-weight="bold">両面活用のメリット：中期3ヶ年計画の達成を支援</text>
+</svg>
